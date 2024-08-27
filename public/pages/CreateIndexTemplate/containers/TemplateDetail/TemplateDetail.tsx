@@ -485,10 +485,11 @@ const TemplateDetail = (props: TemplateDetailProps, ref: Ref<FieldInstance>) => 
               if (result.ok) {
                 coreServices.notifications.toasts.addSuccess(`${values.name} has been successfully updated.`);
                 refreshTemplate();
-              } else {
+              } 
+            }
+            else {
                 coreServices.notifications.toasts.addDanger(result.error);
               }
-            }
           }}
           renderProps={({ renderCancel, renderConfirm, renderUnsavedText }) => {
             return (
